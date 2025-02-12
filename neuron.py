@@ -5,7 +5,7 @@ class Neuron():
         self.weights = np.random.rand(input_size)
         self.bias = np.random.randn()
         self.erreurs = []
-        self.sorties = []
+        
     
     
 
@@ -21,7 +21,7 @@ class Neuron():
     def entrainement(self,inputs,target,learning_rate=0.001):
         '''Mise à jour des poids avec descente de gradient'''
         sortie = self.outputs(inputs)
-        self.sorties.append(sortie)
+        
         erreur = sortie - target
         self.erreurs.append(erreur**2)
         #Descente de gradiant avec la fonction de ReLu
